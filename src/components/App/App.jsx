@@ -5,7 +5,7 @@ import ContactForm from "../ContactForm/ContactForm";
 import SearchBox from "../SearchBox/SearchBox";
 import ContactList from "../ContactList/ContactList";
 
-import { fetchContacts } from "../../redux/contactsAsync";
+import { fetchContacts } from "../../redux/contactsOps";
 import {
   selectLoading,
   selectError,

@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsAsync";
+import { addContact } from "../../redux/contactsOps";
 
 const formSchema = Yup.object({
   name: Yup.string().min(3).max(50).required("Required"),
