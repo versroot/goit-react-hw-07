@@ -10,7 +10,7 @@ import { fetchContacts } from "../../redux/contactsAsync";
 import {
   selectLoading,
   selectError,
-  selectFilteredContacts,
+  // selectFilteredContacts,
 } from "../../redux/contactsSlice";
 
 import "./App.css";
@@ -24,7 +24,7 @@ export default function App() {
 
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
-  const contacts = useSelector(selectFilteredContacts);
+  // const contacts = useSelector(selectFilteredContacts);
 
   return (
     <div className="container">
@@ -36,11 +36,7 @@ export default function App() {
 
       <SearchBox />
 
-      {loading ? (
-        <p className="loading">Loading contacts…</p>
-      ) : (
-        <ContactList contacts={contacts} />
-      )}
+      {loading ? <p className="loading">Loading contacts…</p> : <ContactList />}
     </div>
   );
 }

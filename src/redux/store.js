@@ -5,12 +5,10 @@ import contactsReducer from "./contactsSlice";
 import filtersReducer from "./filtersSlice";
 
 const rootReducer = combineReducers({
-  // all reducerrs
-  contacts: contactsReducer, //use persistReducer for contacts; save to localStorage
-  filters: filtersReducer, // no persist
+  contacts: contactsReducer,
+  filters: filtersReducer,
 });
 
-// Step 3: Create the store with the combined reducer
 export const store = configureStore({
   reducer: rootReducer,
 });
